@@ -1,0 +1,24 @@
+{
+  "name": "exercicio-modulo22",
+  "version": "1.0.0",
+  "description": "Cypress com PageObjects e AppAction",
+  "main": "index.js",
+  "scripts": {
+    "cy:pageobject": "cypress run --spec cypress/integration/checkout.spec.js",
+    "cy:appaction": "cypress run --spec cypress/integration/registration-count.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillianVitorino/exercicio-modulo22.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WillianVitorino/exercicio-modulo22/issues"
+  },
+  "homepage": "https://github.com/WillianVitorino/exercicio-modulo22#readme",
+  "dependencies": {
+    "cypress": "^9.7.0"
+  }
+}
