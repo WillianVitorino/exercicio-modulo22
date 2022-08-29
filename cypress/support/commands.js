@@ -25,5 +25,6 @@ Cypress.Commands.add('login', (user, pass) => {
 })
 
 Cypress.Commands.add('validateCkeckoutPage', () => {
-    cy.get('#main').should('contain.text', 'Checkout').and('have.attr', '.wc-backward')
+    cy.get('#main').should('contain.text', 'Checkout');
+    cy.get('#main > .woocommerce').should('be.visible');
 })
