@@ -1,3 +1,19 @@
 {
-    "baseUrl": "http://lojaebac.ebaconline.art.br"
+    "baseUrl": "http://lojaebac.ebaconline.art.br",
+    "screenshotsFolder": "cypress/report/assets",
+    "screenshotOnRunFailure": true,
+    "videoCompression": false,
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/report/mochawesome-report",
+            "overwrite": false,
+            "html": false,
+            "charts": true,
+            "quite": true,
+            "json": true,
+            "timestamp": "ddmmyyyy_HHMMss"
+        }
+    }
 }
