@@ -1,9 +1,8 @@
-const user = 'gerente'
-const password = 'GD*peToHNJ1#c$sgk08EaYJQ'
+const dadosLogin = require('../fixtures/dados-login.json')
 
 describe('Checkout utilizando App Action', () => {
     it('Página checkout', () => {
-        cy.login(user,password);
+        cy.login(dadosLogin.user,dadosLogin.password);
         cy.validateCkeckoutPage();
     });
 });
