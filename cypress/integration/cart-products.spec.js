@@ -2,7 +2,10 @@
 
 const productPage = require('../support/pages/product-page')
 const products = require('../fixtures/products.json')
-const dados = require('../fixtures/dados.json')
+const dados = require('../fixtures/dados.json');
+const homePage = require('../support/pages/home-page');
+
+let product
 
 describe('Validar carrinho de compras - Adicionar, remover e atualizar', () => {
 
@@ -11,6 +14,14 @@ describe('Validar carrinho de compras - Adicionar, remover e atualizar', () => {
     });
 
     it('Adicionar item no carrinho de compras', () => {
+        homePage.mainMenu.then(resp => {
+            expect(resp.length).to.eq(5)
+            expect(resp[0].textContent).to.contains('Home')
+            expect(resp[1].textContent).to.contains('Comprar')
+            expect(resp[2].textContent).to.contains('Blog')
+            expect(resp[3].textContent).to.contains('Categorias')
+            expect(resp[4].textContent).to.contains('Mais vendidos')
+        })
         Cypress.on('uncaught:exception', (err, runnable) => {
             return false;
           });
@@ -50,8 +61,10 @@ describe('Validar carrinho de compras - Adicionar, remover e atualizar', () => {
 
         productPage.addProduct(products[1].produto);
         productPage.selectVariableProduct(products[1].tamanho, products[1].cor)
+        productPage.clickButtonBasket();
+        productPage.labelProductDetails.contains('Abominable Hoodie');
         productPage.goToCart();
-        productPage.validateNameProductCart(products[1].produto);
+        productPage.textCart.contains(products[1].produto);
     
     });
     

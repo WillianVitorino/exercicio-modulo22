@@ -5,8 +5,10 @@ class ProductPages {
     get colorProduct() {return cy.get('[aria-label="Color"]')};
     get buttonPurchase() {return cy.get('.single_add_to_cart_button')};
     get buttonsSize() {return cy.get('.button-variable-item-')}
-    get buttonCart() {return cy.get('.woocommerce-message > .button')};
+    get buttonCart() {return cy.get('.tbay-topcart .view-cart')};
     get textCart() {return cy.get('.cart_item > .product-name')};
+    get buttonBasket() {return cy.get('.dropdown-toggle > .text-skin > .icon-basket')};
+    get labelProductDetails() {return cy.get('.product-details > .product-name')};
 
     goToProduct() {
         cy.visit('/produtos')
@@ -30,6 +32,9 @@ class ProductPages {
         this.textCart.contains(text)
     }
 
+    clickButtonBasket() {
+        this.buttonBasket.click()
+    }
 }
 
 module.exports = new ProductPages();

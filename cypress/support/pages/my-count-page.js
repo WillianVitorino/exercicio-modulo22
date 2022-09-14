@@ -11,7 +11,6 @@ class MyCount {
         this.fieldEmailRegister.type(email);
         this.fieldPasswordRegister.type(password);
         this.buttonRegister.click();
-        this.textMyCount.contains(`A partir do painel de controle de sua conta, você pode ver suas `)
     }
 }
 
