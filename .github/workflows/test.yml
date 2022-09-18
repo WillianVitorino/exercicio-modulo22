@@ -26,6 +26,7 @@ jobs:
           browser: chrome
           with: npm start
       - name: Publish report
+        uses: mattallty/jest-github-action@v1.0.3
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
