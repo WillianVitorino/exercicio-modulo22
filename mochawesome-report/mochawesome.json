@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-10-09T19:06:46.608Z",
+    "end": "2022-10-09T19:06:56.119Z",
+    "duration": 9511,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1e56d003-e031-4fb0-9ab2-9d7f720eabbb",
+      "title": "",
+      "fullFile": "cypress/integration/registration-count.spec.js",
+      "file": "cypress/integration/registration-count.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9ebf3d36-7b48-4221-a426-a1b8cfe42db3",
+          "title": "Criação de conta - Page Objects",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastrar usuário com sucesso",
+              "fullTitle": "Criação de conta - Page Objects Cadastrar usuário com sucesso",
+              "timedOut": null,
+              "duration": 9364,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/registration-count.spec.js/Criação de conta - Page Objects -- Cadastrar usuário com sucesso (failed).png\"",
+              "code": "homePage.goToMyCount();\nhomePage.mainMenu.then(resp => {\n  expect(resp.length).to.eq(5);\n  expect(resp[0].textContent).to.contains('Home');\n  expect(resp[1].textContent).to.contains('Comprar');\n  expect(resp[2].textContent).to.contains('Blog');\n  expect(resp[3].textContent).to.contains('Categorias');\n  expect(resp[4].textContent).to.contains('Mais vendidos');\n});\nmyCountPage.setFieldsRegister(dadosRegister.emailRegister + numRandom, dadosRegister.password);\nmyCountPage.textMyCount.contains(`A partir do painel de controle de sua conta, você pode ver suas `);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#reg_email`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#reg_email`, but never found it.\n    at MyCount.get fieldEmailRegister [as fieldEmailRegister] (http://lojaebac.ebaconline.art.br/__cypress/tests?p=cypress/integration/registration-count.spec.js:249:15)\n    at MyCount.eval [as setFieldsRegister] (http://lojaebac.ebaconline.art.br/__cypress/tests?p=cypress/integration/registration-count.spec.js:242:12)\n    at Context.eval (http://lojaebac.ebaconline.art.br/__cypress/tests?p=cypress/integration/registration-count.spec.js:176:17)",
+                "diff": null
+              },
+              "uuid": "9f6ab941-9aab-4ed7-9f74-c82fe66a16b8",
+              "parentUUID": "9ebf3d36-7b48-4221-a426-a1b8cfe42db3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9f6ab941-9aab-4ed7-9f74-c82fe66a16b8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9364,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
