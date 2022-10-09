@@ -4,7 +4,7 @@
   "description": "Cypress com PageObjects e AppAction",
   "main": "index.js",
   "scripts": {
-    "report:merge": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/index.json",
+    "report:merge": " npx cypress run --reporter mochawesome --reporter-options reportDir=\"mochawesome-report\"",
     "report:generate": "marge cypress/report/index.json --reportDir ./ --inline",
     "report:cleanup": "del /s cypress/report/*",
     "start": "npx serverest"
