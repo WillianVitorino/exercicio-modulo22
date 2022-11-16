@@ -7,7 +7,8 @@
     "report:merge": " npx cypress run --reporter mochawesome --reporter-options reportDir=\"mochawesome-report\"",
     "report:generate": "marge cypress/report/index.json --reportDir ./ --inline",
     "report:cleanup": "del /s cypress/report/*",
-    "start": "npx serverest"
+    "start": "npx serverest",
+    "cy:report": "npx cypress run --record --key dcf0f7c4-e0ba-4ba7-83c9-b27adce6ab75"
   },
   "repository": {
     "type": "git",
