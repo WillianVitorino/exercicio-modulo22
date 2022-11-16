@@ -1,4 +1,5 @@
 {
+    "projectId": "d8ep8t",
     "baseUrl": "http://lojaebac.ebaconline.art.br",
     "screenshotsFolder": "cypress/report/assets",
     "screenshotOnRunFailure": true,
